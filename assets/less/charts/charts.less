@@ -1,0 +1,41 @@
+@import "themes.less";
+
+.chart {
+  .chart-type-index-loop(@chart-type-index) when (@chart-type-index > 0) {
+    @chart-type: extract(@chart-types, @chart-type-index);
+
+    .theme-index-loop (@theme-index) when (@theme-index > 0) {
+      @theme: extract(@theme-names, @theme-index);
+
+      &.chart-theme-@{theme} {
+        .palette-index-loop (@palette-index) when (@palette-index > 0) {
+	  &.chart-@{chart-type} {
+	    .visual {
+	      &.visual-@{chart-type} {
+		path {
+		  &.@{chart-type} {
+		    &.@{chart-type}-index-@{palette-index} {
+                      .theme(@theme-index);
+		      .chart-attr-lookup(@chart-type, extract(@chart-pallette, @palette-index));
+                    }
+		  }
+		}
+	      }
+	    }
+	  }
+	  .palette-index-loop(@palette-index - 1);
+	}
+	.palette-index-loop (0) {}
+	.palette-index-loop(@color-palette-length);
+      }
+
+      .theme-index-loop(@theme-index - 1);
+    }
+    .theme-index-loop (0) {}
+    .theme-index-loop(@theme-length);
+    
+    .chart-type-index-loop(@chart-type-index - 1);
+  }
+  .chart-type-index-loop (0) {}
+  .chart-type-index-loop(@chart-type-length);
+}

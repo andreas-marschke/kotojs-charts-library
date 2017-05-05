@@ -1,0 +1,41 @@
+.chart {
+  &.chart-area {
+    .visual {
+      &.visual-area {
+	path {
+	  &.area {
+	    stroke-width: 2;
+	    stroke: none;
+	  }
+	}
+      }
+    }
+    .axis {
+      &.axis-x {
+	path.domain {
+	  stroke: black;
+	  stroke-width: 1;
+	  fill: none;
+	}
+	g.tick {
+	  area {
+	    stroke: black;
+	    stroke-width: 1;
+	  }
+	}
+      }
+      &.axis-y {
+	path.domain {
+	  stroke: black;
+	  stroke-width: 1;
+	  fill: none;
+	}
+	g.tick {
+	  area {
+	    fill: none;
+	  }
+	}
+      }
+    }
+  }
+}

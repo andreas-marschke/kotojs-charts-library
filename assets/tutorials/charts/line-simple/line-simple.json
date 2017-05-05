@@ -1,0 +1,8 @@
+{
+  "title": "Simple Line Chart",
+  "doc": "line-simple.md",
+  "app": "line-simple.js",
+  "data": "data/line-simple.csv",
+  "type": "tutorial",
+  "group": "charts"
+}

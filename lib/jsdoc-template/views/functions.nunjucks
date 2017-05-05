@@ -1,0 +1,54 @@
+<!-- SrcTemplate: functions.nunjucks -->
+{% for function in functions %}
+  <div class="row definition" id="function-{{function.name}}">
+    <div class="col-md-10 function">
+      <h3><code>{{function.name}}</code></h3>
+      <p>
+        {{ function.description }}
+      </p>
+      {% if function.examples and function.examples.length > 0 %}
+        {% for example in function.examples %}
+{% code %}
+{{ example }}{% endcode %}
+        {% endfor %}
+      {% endif%}
+
+      {% if function.params and function.params.length > 0 %}
+      <div class="page-heading">
+        <h5><strong>Params</strong></h5>
+      </div>
+
+      <table class="table table-striped table-bordered table-hover table-condensed table-responsive">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for param in function.params %}
+            <tr>
+              <td><code>{{ param.name }}</code></td>
+              <td>{{ param.type.names | typesToURL | toLinks | join("|") }}</td>
+              <td>{{ param.description }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% endif %}
+      {% if function.returns and function.returns.length > 0 %}
+        <div class="page-heading">
+          <h5><strong>Returns</strong></h5>
+        </div>
+        <ul>
+          {% for return in function.returns %}
+            <li>
+              {{ return.type.names | typesToURL | toLinks | join("|") }} - {{ return.description }}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+{% endfor %}

@@ -1,0 +1,41 @@
+.chart {
+  &.chart-line {
+    .visual {
+      &.visual-line {
+	path {
+	  &.line {
+	    stroke-width: 2;
+	    fill: none;
+	  }
+	}
+      }
+    }
+    .axis {
+      &.axis-x {
+	path.domain {
+	  stroke: black;
+	  stroke-width: 1;
+	  fill: none;
+	}
+	g.tick {
+	  line {
+	    stroke: black;
+	    stroke-width: 1;
+	  }
+	}
+      }
+      &.axis-y {
+	path.domain {
+	  stroke: black;
+	  stroke-width: 1;
+	  fill: none;
+	}
+	g.tick {
+	  line {
+	    fill: none;
+	  }
+	}
+      }
+    }
+  }
+}

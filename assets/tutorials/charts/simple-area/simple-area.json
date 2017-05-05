@@ -1,0 +1,8 @@
+{
+  "title": "Simple Area Chart",
+  "doc": "simple-area.md",
+  "app": "simple-area.js",
+  "data": "data/simple-area.csv",
+  "type": "tutorial",
+  "group": "charts"
+}

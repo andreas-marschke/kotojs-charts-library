@@ -1,0 +1,36 @@
+{% extends "layout-guides.nunjucks" %}
+
+{% block body %}
+<!-- SrcTemplate: guide-index.nunjucks -->
+  <div class="row tutorial-heading">
+    <div class="page-heading">
+      <h1>{{ title }}</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      {% markdown %}{{ guide.content }}{% endmarkdown %}
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list list-unstyled">
+        <!--
+             {{ guide.children | dump }}
+           -->
+        {% for child in guide.children %}
+          <li>
+            <a href="{{ child.name }}.html">{{ child.title }}</a>
+            <p></p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>  
+{% endblock %}
+
+{% block scripts %}
+  
+{% endblock %}

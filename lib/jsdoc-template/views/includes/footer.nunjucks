@@ -1,0 +1,14 @@
+<div class="container-fluid footer">
+  <div class="row">
+    <div class="col-md-6">
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p class="text-center">
+        <small class="text-muted text-center">{{ package.name }} v{{ package.version }} by {{ package.author.name }} © 2016</small>
+      </p>
+    </div>
+  </div>
+</div>

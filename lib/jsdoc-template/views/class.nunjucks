@@ -1,0 +1,75 @@
+{% extends "layout-api.nunjucks" %}
+
+{% block body %}
+  <div class="row classname">
+    <div class="page-heading">
+      <h1>{{ class.name }}{% if class.augments and class.augments.length == 1 %} <small class="text-muted">extends: <a href="{{class.augments[0] | typeToURL }}"><code>{{ class.augments[0] }}</code></a></small>{% endif %}</h1>
+    </div>
+  </div>
+
+  <div class="row basic-info">
+    <div class="col-md-12">
+      <div class="description">
+        <small><p class="lead">{{class.classdesc}}</p></small>
+      </div>
+    </div>
+  </div>
+
+  {% if class.examples and class.examples.length > 0 %}
+    <div class="row">
+      <div class="page-heading">
+        <h3>Example</h3>
+      </div>
+    </div>
+
+    {% for example in class.examples %}
+      <div class="row example">
+        <div class="col-md-12">
+          {% code %}{{ example }}{% endcode %}
+        </div>
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  {% if properties %}
+    <div class="row">
+      <div class="page-heading">
+        <h3>Properties</h3>
+      </div>
+    </div>
+
+    <div class="row properties">
+      <div class="col-md-10">
+        {{ properties }}
+      </div>
+    </div>
+  {% endif %}
+
+
+  {% if functions %}
+    <div class="row">
+      <div class="page-heading">
+        <h3>Functions</h3>
+      </div>
+    </div>
+
+    <div class="functions-wrapper">
+      {{ functions }}
+    </div>
+  {% endif %}
+
+  {% if configs %}
+    <div class="row">
+      <div class="page-heading">
+        <h3>Configuration</h3>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-10">
+        {{ configs }}
+      </div>
+    </div>
+  {% endif %}    
+{% endblock %}
+

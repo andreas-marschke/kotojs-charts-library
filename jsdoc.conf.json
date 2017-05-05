@@ -1,0 +1,16 @@
+{
+	"tags": {
+		"allowUnknownTags": true
+	},
+	"opts": {
+		"recurse": true,
+		"versioned": false,
+    "basePath": "/docs/",
+    "tutorialsPath": "assets/tutorials/",
+    "dataDir": "/data/"
+	},
+  "templates": {
+    "cleverLinks": false,
+    "monospacedLinks": true
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Customize a Charts Axis",
+  "doc": "custom-axis.md",
+  "app": "custom-axis.js",
+  "data": "data/custom-axis.csv",
+  "type": "tutorial",
+  "group": "charts"
+}

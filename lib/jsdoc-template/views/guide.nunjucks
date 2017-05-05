@@ -1,0 +1,39 @@
+{% extends "layout-guides.nunjucks" %}
+
+{% block body %}
+<!-- SrcTemplate: guide.nunjucks -->
+  <div class="row tutorial-heading">
+    <div class="page-heading">
+      <h1>{{ guide.title }}</h1>
+    </div>
+  </div>
+
+  <h3>Example</h3>
+  
+  <div class="row">
+    <div class="col-md-12">
+      <div class="chart-wrapper">
+        <div id="chart"></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Description</h3>
+      {% markdown %}{{ guide.content }}{% endmarkdown %}
+      <h3>Code</h3>
+{% code %}
+{{ guide.code }}{% endcode %}
+      <h3>Data</h3>
+      <div class="data">
+{% code %}
+{{ guide.dataContent }}{% endcode%}
+      </div>
+    </div>
+  </div>  
+{% endblock %}
+
+{% block scripts %}
+  <script type="text/javascript">{{ guide.code }}</script>
+{% endblock %}

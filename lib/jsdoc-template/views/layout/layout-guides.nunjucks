@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title> KotoChartLib - Guides - {{ guide.name }}</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="/css/deps.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/styles.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/docs.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/main.min.css" type="text/css" media="screen" />
+  </head>
+  <body>
+    {% set current = "Guides" %}
+    {% include "navbar.nunjucks"%}
+    <div class="container">
+      {% block body %}
+      {% endblock %}
+    </div>
+    
+    <script src="/js/deps.min.js" type="text/javascript"></script>
+    <script src="/js/chart.min.js" type="text/javascript"></script>
+    {% block scripts %}
+    {% endblock %}
+  </body>
+</html>

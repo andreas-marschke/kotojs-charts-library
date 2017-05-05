@@ -1,0 +1,13 @@
+{
+  "Koto": "http://kotojs.org/docs",
+  "Koto.config": "http://kotojs.org/docs/#kotoconfigname-value",
+  "Koto.accessor": "http://kotojs.org/docs/#kotoaccessorname-value",
+  "d3.selection": "https://github.com/d3/d3-selection",
+  "d3.time.scale": "https://github.com/d3/d3-3.x-api-reference/blob/master/Time-Scales.md",
+  "d3.scale.linear": "https://github.com/d3/d3-scale",
+  "d3.svg.axis": "https://github.com/d3/d3-axis",
+  "Object": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+  "string": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+  "number": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+  "boolean": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"
+}

@@ -1,0 +1,30 @@
+@navbar-color: #eee;
+
+// Prevent vertical rhythm problem because h3 in the row
+// is not wrapped in page-heading and has too high margins
+.functions-wrapper {
+  .row:first-child {
+    .function h3 {
+      margin-top: 0px;
+    }
+  }
+}
+
+// If your top menu list has the flag "hirarchy" assume <h5>s are
+// headings and list elements beneath it are elements underneath the heading
+.dropdown-header, .dropdown-menu {
+  &.hirarchy {
+    li {
+      h5 {
+	clear: both;
+	color: #333;
+	display: block;
+	font-weight: 800;
+	line-height: 1.42857143;
+	padding: 0px 20px;
+	white-space: nowrap;
+	//border-bottom: @navbar-color solid 1px;
+      }
+    }
+  }
+}

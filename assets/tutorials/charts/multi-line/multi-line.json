@@ -1,0 +1,8 @@
+{
+  "title": "Multiple Lines in one LineChart",
+  "doc": "multi-line.md",
+  "app": "multi-line.js",
+  "data": "data/multi-line.tsv",
+  "type": "tutorial",
+  "group": "charts"
+}

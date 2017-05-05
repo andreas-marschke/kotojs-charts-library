@@ -1,0 +1,42 @@
+@theme-names: default, google-colors, grayscale, muted-brown;
+@theme-names-str: "default", "google-colors", "grayscale", "muted-brown";
+
+@chart-types: line, area, pie;
+@chart-attrs: stroke, fill;
+
+@color-palette-length: 5;
+@theme-length: length(@theme-names);
+@chart-type-length: length(@chart-types);
+
+@import "themes/default.less";
+@import "themes/google-colors.less";
+@import "themes/grayscale.less";
+@import "themes/muted-brown.less";
+
+.theme(1) {
+  .theme-default();
+}
+
+.theme(2) {
+  .theme-google-colors();
+}
+
+.theme(3) {
+  .theme-grayscale();
+}
+
+.theme(4) {
+  .theme-muted-brown();
+}
+
+.chart-attr-lookup(line, @color) {
+  stroke: @color;
+}
+
+.chart-attr-lookup(area, @color) {
+  fill: @color;
+}
+
+.chart-attr-lookup(pie, @color) {
+  fill: @color;
+}
